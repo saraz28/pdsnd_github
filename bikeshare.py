@@ -26,8 +26,8 @@ def get_filters():
 
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     while True:
-        city = input(
-            "Would you like to see data for Chicago, New York, or Washington? ")
+        city = str(input(
+            "Would you like to see data for Chicago, New York, or Washington? "))
         if city in cities:
             break
         else:
@@ -35,8 +35,8 @@ def get_filters():
 
     # TO DO: get user input for month (all, january, february, ... , june)
     while True:
-        month = input(
-            'Which month - January, February, March, April, May, or June you want to see the data? ')
+        month = str(input(
+            'Which month - January, February, March, April, May, or June you want to see the data? '))
         if month in conver_to_lower:
             break
         else:
@@ -44,8 +44,8 @@ def get_filters():
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     while True:
-        day = input(
-            'Which day - Monday, Tuesday, Wednesday, Thursday, Friday, Saturday you want to see the data? ')
+        day = str(input(
+            'Which day - Monday, Tuesday, Wednesday, Thursday, Friday, Saturday you want to see the data? '))
         if day in conver_to_lower_day:
             break
         else:
@@ -90,9 +90,9 @@ def moreData(city):
     start = 0
     end = 5
     while True:
-        YorN = str(
+        rowData = str(
             input("would like want to see the raw data? Enter yes or no.\n "))
-        if(YorN == 'yes'):
+        if(rowData == 'yes'):
             print(df.iloc[start:end])
             start += 5
             end += 5
