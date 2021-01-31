@@ -1,15 +1,28 @@
-### Date created
-Include the date you created this project and README file.
+## Expolore US Bikeshare Data
 
-### Project Title
-Replace the Project Title
+##### Date created
 
-### Description
-Describe what your project is about and what it does
+2021-01-20
+
+### Overview
+
+---
+
+This is my udacity project in programming for Data Science nanodegree used python to explore data related to bike share systems of three major cities in United States are Chicago, New York City and Washington.
 
 ### Files used
-Include the files used
 
-### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+---
 
+- bikeshare.py
+- chicago.csv
+- new_york_city.csv
+- washington.csv
+
+### Resources
+
+---
+
+- https://realpython.com/python-keyerror/
+
+- https://www.tutorialspoint.com/python3/python_basic_syntax.htm
