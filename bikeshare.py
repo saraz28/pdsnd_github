@@ -67,16 +67,22 @@ def load_data(city, month, day):
         df - Pandas DataFrame containing city data filtered by month and day
     """
     df = pd.read_csv(CITY_DATA[city])
+
+# TO DO: convert the Start Time column to datetime
     df['Start Time'] = pd.to_datetime(df['Start Time'])
+
+# To DO: extract month and day of week from Start Time to create new columns
     df['month'] = df['Start Time'].dt.month
     df['day_of_week'] = df['Start Time'].dt.weekday_name
     df['hour'] = df['Start Time'].dt.hour
+
+# TO DO:  filter by month if applicable
     if month != 'all':
         months = ['january', 'february', 'march', 'april', 'may', 'june']
         month = months.index(month) + 1
 
         df = df[df['month'] == month]
-
+# TO DO: filter by day of week if applicable
     if day != 'all':
         df = df[df['day_of_week'] == day.title()]
 
@@ -89,6 +95,7 @@ def moreData(city):
     df = pd.read_csv(CITY_DATA[city])
     start = 0
     end = 5
+# TO DO: prompt the user whether they would like want to see the raw data.
     while True:
         rowData = str(
             input("would like want to see the raw data? Enter yes or no.\n "))
